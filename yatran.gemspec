@@ -7,7 +7,11 @@ Gem::Specification.new do |gem|
   gem.email         = ["fedoronchuk@gmail.com"]
   gem.description   = %q{unofficial http://api.yandex.ru/translate API Client for ruby }
   gem.summary       = %q{ automatic translations and language detecting }
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/Fivell/yatran"
+
+
+  gem.add_dependency('json')
+
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
