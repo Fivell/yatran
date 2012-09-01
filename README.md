@@ -1,5 +1,4 @@
 
-<a href="http://coderwall.com/igorf"><img src="http://api.coderwall.com/igorf/endorsecount.png" /></a>
 
 Ruby unofficial client for Yandex translation engine
 
