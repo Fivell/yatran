@@ -1,8 +1,6 @@
 # Yatran
 
-
-
-Supported language translation directions   http://translate.yandex.net/api/v1/tr/getLangs
+Ruby unofficial client for Yandex translation engine
 
 
 Examples
@@ -50,7 +48,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+ Terms of use (free access, up to 10,000 request a day or 1,000,000 requested characters)
+ At the moment it supports the following lang pairs:
+ http://translate.yandex.net/api/v1/tr/getLangs
+
+ More info
+
+ English version: http://translate.yandex.net/tr-url/en+ru.ru/api.yandex.ru/translate/  (tranlated automatically)
+ Russian version: http://api.yandex.ru/translate/
+
 
 ## Contributing
 
