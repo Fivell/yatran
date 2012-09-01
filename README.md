@@ -1,3 +1,5 @@
+"!http://api.coderwall.com/igorf/endorsecount.png!":http://coderwall.com/igorf
+
 # Yatran
 
 Ruby unofficial client for Yandex translation engine
