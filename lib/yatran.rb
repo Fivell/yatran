@@ -29,10 +29,6 @@ require "yatran/error"
 require "yatran/url"
 require "yatran/api"
 require "yatran/languages"
-
-
-
-
 require "yatran/translatable"
 require "yatran/detectable"
 
