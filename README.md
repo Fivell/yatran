@@ -1,4 +1,4 @@
-# Yatran
+
 
 Ruby unofficial client for Yandex translation engine
 
