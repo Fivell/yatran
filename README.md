@@ -68,19 +68,18 @@ Or install it yourself as:
 
     Commands
 
-     d: detect text language
-     t: translate text
+        d: detect text language
+        t: translate text
 
     Options
-
-    -p, --phrase Phrase [OPT]        Phrase to translate or detect
-    -s, --source FILE [OPT]          File with text to translate
-    -o, --output FILE [OPT]          File with output
-    -f, --from FROM_LANG [OPT]       Language of phrase/text 
-    -t TO_LANG [OPT]output language ,
-        --to
-    -l, --language LANGDIR [OPT]     available language direction
-    -d, --debug                      Debug flag
+    
+        -p, --phrase Phrase [OPT]        Phrase to translate or detect
+        -s, --source FILE [OPT]          File with text to translate
+        -o, --output FILE [OPT]          File with output
+        -f, --from FROM_LANG [OPT]       Language of phrase/text 
+        -t, --to TO_LANG [OPT]           Output language 
+        -l, --language LANGDIR [OPT]     Available language direction
+        -d, --debug                      Debug flag   
 
 
 
