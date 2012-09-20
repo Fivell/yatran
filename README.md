@@ -1,4 +1,3 @@
-
 Ruby unofficial client for Yandex translation engine
 
 
@@ -60,16 +59,19 @@ Or install it yourself as:
 ## CLI
 
  ./yatran -h
+ 
     Yandex Command line translations.
     Available language directions : ru-en,ru-pl,ru-uk,ru-de,ru-fr,ru-es,ru-it,ru-tr,en-ru,en-uk,en-tr,pl-ru,uk-ru,uk-en,de-ru,fr-ru,es-ru,it-ru,tr-ru,tr-en
     Usage: yatran COMMAND [OPTIONS]
 
 
-Commands
+    Commands
+
      d: detect text language
      t: translate text
 
-Options
+    Options
+
     -p, --phrase Phrase [OPT]        Phrase to translate or detect
     -s, --source FILE [OPT]          File with text to translate
     -o, --output FILE [OPT]          File with output
