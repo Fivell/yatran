@@ -59,10 +59,10 @@ EOS
           opts.on("-f", "--from FROM_LANG [OPT]", "Language of phrase/text ") do |from|
             @options[:from] = from
           end
-          opts.on("-t", "--to TO_LANG [OPT]", "output language ") do |to|
+          opts.on("-t", "--to TO_LANG [OPT]", "Output language ") do |to|
             @options[:to] = to
           end
-          opts.on("-l", "--language LANGDIR [OPT]", "available language direction") do |d|
+          opts.on("-l", "--language LANGDIR [OPT]", "Available language direction") do |d|
             @options[:direction] = d
           end
           opts.on( '-d', '--debug', "Debug flag" ) do
