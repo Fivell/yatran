@@ -27,7 +27,7 @@ module Yatran
 
 
      def translate(translation_direction)
-       #URI::encode(
+
        API.request('translate', {:lang=> translation_direction, :text=>self})['text'][0]
 
      end
@@ -58,6 +58,7 @@ module Yatran
     # @private
 
     def respond_to?(method, include_private = false)
+
       return true unless translation_direction(method.to_s).nil?
       super(method, include_private)
     end
@@ -72,7 +73,7 @@ module Yatran
       when /^from_(.*)_to_(.*)$/
           method = "#{$1}-#{$2}"
 
-      else
+      when method.include?("_")
             method["_"] = "-"
       end
 

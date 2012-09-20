@@ -32,6 +32,7 @@ require "yatran/languages"
 require "yatran/translatable"
 require "yatran/detectable"
 
+
 String.send :include, Yatran::Translatable
 String.send :include, Yatran::Detectable
 

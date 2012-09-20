@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require File.expand_path('../lib/yatran/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Igor"]
+  gem.authors       = ["Igor Fedoronchuk"]
   gem.email         = ["fedoronchuk@gmail.com"]
   gem.description   = %q{unofficial http://api.yandex.ru/translate API Client for ruby }
   gem.summary       = %q{ automatic translations and language detecting }
