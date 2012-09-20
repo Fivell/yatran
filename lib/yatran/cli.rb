@@ -37,7 +37,7 @@ module Yatran
         OptionParser.new do |opts|
           opts.banner = <<EOS
                     Yandex Command line translations.
-                    Available translation directions : #{languages}
+                    Available language directions : #{languages}
                     Usage: yatran COMMAND [OPTIONS]
 
 EOS
