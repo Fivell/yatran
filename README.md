@@ -1,5 +1,3 @@
-
-
 Ruby unofficial client for Yandex translation engine
 
 
@@ -57,6 +55,31 @@ Or install it yourself as:
  English version: http://translate.yandex.net/tr-url/en+ru.ru/api.yandex.ru/translate/  (tranlated automatically)
  Russian version: http://api.yandex.ru/translate/
 
+
+## CLI
+
+ ./yatran -h
+ 
+    Yandex Command line translations.
+    Available language directions : ru-en,ru-pl,ru-uk,ru-de,ru-fr,ru-es,ru-it,ru-tr,en-ru,en-uk,en-tr,pl-ru,uk-ru,uk-en,de-ru,fr-ru,es-ru,it-ru,tr-ru,tr-en
+    Usage: yatran COMMAND [OPTIONS]
+
+
+    Commands
+
+     d: detect text language
+     t: translate text
+
+    Options
+
+    -p, --phrase Phrase [OPT]        Phrase to translate or detect
+    -s, --source FILE [OPT]          File with text to translate
+    -o, --output FILE [OPT]          File with output
+    -f, --from FROM_LANG [OPT]       Language of phrase/text 
+    -t TO_LANG [OPT]output language ,
+        --to
+    -l, --language LANGDIR [OPT]     available language direction
+    -d, --debug                      Debug flag
 
 ## Contributing
 
