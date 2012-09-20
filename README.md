@@ -58,7 +58,7 @@ Or install it yourself as:
 
 ## CLI
 
- ./yatran -h
+    ./yatran -h
  
     Yandex Command line translations.
     Available language directions : ru-en,ru-pl,ru-uk,ru-de,ru-fr,ru-es,ru-it,ru-tr,en-ru,en-uk,en-tr,pl-ru,uk-ru,uk-en,de-ru,fr-ru,es-ru,it-ru,tr-ru,tr-en
