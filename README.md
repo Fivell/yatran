@@ -56,9 +56,10 @@ Or install it yourself as:
  Russian version: http://api.yandex.ru/translate/
 
 
-## CLI
+## CLI 
+/bin/yaran is a cli utility to use yandex translation API 
 
- ./yatran -h
+    ./yatran -h
  
     Yandex Command line translations.
     Available language directions : ru-en,ru-pl,ru-uk,ru-de,ru-fr,ru-es,ru-it,ru-tr,en-ru,en-uk,en-tr,pl-ru,uk-ru,uk-en,de-ru,fr-ru,es-ru,it-ru,tr-ru,tr-en
