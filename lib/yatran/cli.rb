@@ -69,7 +69,7 @@ EOS
             @options[:debug] = true
           end
         end.parse!
-
+        p @options
       end
 
 
@@ -105,9 +105,10 @@ EOS
 
 
         unless @text
-          if @options[:source]
-            raise Error.new("File #{@options[:source]} doesn't exist") unless File.exists? @options[:source]
-            @text = IO.read @options[:source]
+          if @options[:file]
+            raise Error.new("File #{@options[:file]} doesn't exist") unless File.exists? @options[:file]
+            @text = IO.read @options[:file]
+
           end
         end
 
@@ -116,7 +117,7 @@ EOS
       end
 
       def validate_direction!
-        @direction = @options[:direction]
+        @direction = @options[:direction].gsub("-","_")
           unless @direction
              raise Error.new(" Undefined translation direction ")  unless  ( @options[:from] and @options[:to] )
              @direction =  "#{@options[:from]}-#{@options[:to]}"
