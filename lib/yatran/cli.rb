@@ -78,7 +78,7 @@ EOS
         validate_direction!
         result = @text.send(@direction)
         if @options[:output]
-          throw Error.new("File #{@opts[:output]} already exists") if File.exists? @options[:output]
+          raise Error.new("File #{@opts[:output]} already exists") if File.exists? @options[:output]
           File.open(@options[:output], 'w') { |f| f.write(result) }
           puts "check file #{@options[:output]}"
 
@@ -106,20 +106,23 @@ EOS
 
         unless @text
           if @options[:source]
-            throw Error.new("File #{@options[:source]} doesn't exist") unless File.exists? @options[:source]
+            raise Error.new("File #{@options[:source]} doesn't exist") unless File.exists? @options[:source]
             @text = IO.read @options[:source]
           end
         end
+
+        raise Error.new(" Text is undefined ")  if @text.nil?
+
       end
 
       def validate_direction!
         @direction = @options[:direction]
           unless @direction
-             throw Error.new(" Undefined translation direction ")  unless  ( @options[:from] and @options[:to] )
+             raise Error.new(" Undefined translation direction ")  unless  ( @options[:from] and @options[:to] )
              @direction =  "#{@options[:from]}-#{@options[:to]}"
           end
           @direction = @direction.to_sym
-          throw Error.new(" #{@direction} translation is not supported ")  unless @text.respond_to?(@direction)
+          raise Error.new(" #{@direction} translation is not supported ")  unless @text.respond_to?(@direction)
        end
 
   end

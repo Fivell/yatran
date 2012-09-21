@@ -10,7 +10,9 @@ Gem::Specification.new do |gem|
   gem.homepage      = "https://github.com/Fivell/yatran"
 
 
-  gem.add_dependency('json')
+  gem.add_dependency 'json'
+  gem.add_development_dependency "rspec"
+
 
 
   gem.files         = `git ls-files`.split($\)

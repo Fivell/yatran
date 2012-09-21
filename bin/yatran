@@ -19,11 +19,18 @@ options = tranlsator.instance_variable_get(:@options)
 case ARGV[0]
 when "d"
   puts "call detect with options #{options.inspect}"   if tranlsator[:debug]
-  tranlsator.detect!
+  begin
+    tranlsator.detect!
+  rescue => e
+     puts e.message
+  end
 when "t"
   puts "call translate on options #{options.inspect}"  if tranlsator[:debug]
-  tranlsator.translate!
-
+  begin
+    tranlsator.translate!
+  rescue => e
+    p e.message
+  end
 else
   puts "Undefined command #{ARGV[0]}"
                                                         #
