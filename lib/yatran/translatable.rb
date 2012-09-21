@@ -67,18 +67,17 @@ module Yatran
 
     def translation_direction(method)
 
-      case method
-      when /^to_(.*)_from_(.*)$/
-         method = "#{$2}-#{$1}"
-      when /^from_(.*)_to_(.*)$/
-          method = "#{$1}-#{$2}"
-
-      when method.include?("_")
-            method["_"] = "-"
+      method = case method
+        when /^to_(.*)_from_(.*)$/
+          then "#{$2}-#{$1}"
+        when /^from_(.*)_to_(.*)$/
+          then "#{$1}-#{$2}"
+        when /^(.*)_(.*)$/
+          then "#{$1}-#{$2}"
       end
 
-      method = nil unless LANGUAGES_TRANSLATIONS.include? method
-      method
+      (LANGUAGES_TRANSLATIONS.include? method ) ? method : nil
+
 
     end
 
