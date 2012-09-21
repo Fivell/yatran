@@ -52,7 +52,7 @@ Or install it yourself as:
 
  More info
 
- English version: http://translate.yandex.net/tr-url/en+ru.ru/api.yandex.ru/translate/  (tranlated automatically)
+ English version: http://translate.yandex.net/tr-url/en+ru.ru/api.yandex.ru/translate/  (translated automatically)
  Russian version: http://api.yandex.ru/translate/
 
 
