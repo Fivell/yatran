@@ -27,9 +27,9 @@ module Yatran
 
 
      def translate(translation_direction)
-
-       API.request('translate', {:lang=> translation_direction, :text=>self})['text'][0]
-
+       response = API.request('translate', {:lang=> translation_direction, :text=>self})['text']
+       response  =  response.first unless self.kind_of? Array
+       response
      end
 
 

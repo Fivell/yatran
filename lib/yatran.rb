@@ -33,6 +33,11 @@ require "yatran/translatable"
 require "yatran/detectable"
 
 
-String.send :include, Yatran::Translatable
-String.send :include, Yatran::Detectable
+String.class_eval do 
+  include Yatran::Translatable
+  include Yatran::Detectable
+end
 
+Array.class_eval do 
+  include Yatran::Translatable
+end  
