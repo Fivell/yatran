@@ -16,8 +16,6 @@ Examples
     => "Bonjour tout le monde!"
     1.9.2p320 :006 > "Hello world".en_ru.ru_it
     => "Ciao, mondo!"
-    1.9.2p320 :007 > "Hello world".en_ru.ru_it.language
-    => "it"
     1.9.2p320 :009 > "Hello world".respond_to?("en_ru")
     => true
     1.9.2p320 :010 > "Hello world".respond_to?("from_en_to_ru")
@@ -25,6 +23,10 @@ Examples
     1.9.2p320 :011 > "Hello world".respond_to?("to_ru_from_en")
     => true
 
+Detect with language method
+
+    1.9.2p320 :007 > "Hello world".en_ru.ru_it.language
+    => "it"
 
 
 Arrays also includes Yatran::Translatable module 
