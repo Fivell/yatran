@@ -26,9 +26,16 @@ module Yatran
   module Translatable
 
 
+     def self.included(base)
+
+       base.extend ClassMethods
+
+     end
+
+
      def translate(translation_direction)
        response = API.request('translate', {:lang=> translation_direction, :text=>self})['text']
-       response  =  response.first unless self.kind_of? Array
+       response =  response[0] unless self.kind_of? Array
        response
      end
 
@@ -80,6 +87,16 @@ module Yatran
 
 
     end
+
+
+
+     module ClassMethods
+
+       def translation_directions
+           LANGUAGES_TRANSLATIONS
+       end
+
+     end
 
 
   end
