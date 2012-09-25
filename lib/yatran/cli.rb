@@ -69,7 +69,7 @@ EOS
             @options[:debug] = true
           end
         end.parse!
-        p @options
+
       end
 
 
