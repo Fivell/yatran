@@ -18,8 +18,6 @@ Examples
     => "Ciao, mondo!"
     1.9.2p320 :007 > "Hello world".en_ru.ru_it.language
     => "it"
-    1.9.2p320 :008 > Yatran::LANGUAGES_TRANSLATIONS
-    => ["ru-en", "ru-pl", "ru-uk", "ru-de", "ru-fr", "ru-es", "ru-it", "ru-tr", "en-ru", "en-uk", "en-tr", "pl-ru", "uk-ru", "uk-en", "de-ru", "fr-ru", "es-ru", "it-ru", "tr-ru", "tr-en"]
     1.9.2p320 :009 > "Hello world".respond_to?("en_ru")
     => true
     1.9.2p320 :010 > "Hello world".respond_to?("from_en_to_ru")
@@ -27,6 +25,33 @@ Examples
     1.9.2p320 :011 > "Hello world".respond_to?("to_ru_from_en")
     => true
 
+
+
+Arrays also includes Yatran::Translatable module 
+
+    1.9.3p125 :015 > ["hello", "goodbye"].en_tr
+     => ["merhaba", "elveda"] 
+    1.9.3p125 :017 > ["hello", "goodbye"].from_en_to_ru
+     => ["Привет", "до свидания"] 
+
+
+Direct translate method
+
+    1.9.3p125 :008 > ["hello", "goodbye"].translate('en-tr')
+     => ["merhaba", "elveda"] 
+    1.9.3p125 :009 > "hello".translate("en-tr")
+     => "merhaba"
+
+
+Avaliable directions
+    
+    1.9.3p125 :031 > String.translation_directions
+     => ["ru-en", "ru-pl", "ru-uk", "ru-de", "ru-fr", "ru-es", "ru-it", "ru-tr", "en-ru", "en-uk", "en-tr", "pl-ru", "uk-ru", "uk-en", "de-ru", "fr-ru", "es-ru", "it-ru", "tr-ru", "tr-en"] 
+    1.9.3p125 :032 > Array.translation_directions
+     => ["ru-en", "ru-pl", "ru-uk", "ru-de", "ru-fr", "ru-es", "ru-it", "ru-tr", "en-ru", "en-uk", "en-tr", "pl-ru", "uk-ru", "uk-en", "de-ru", "fr-ru", "es-ru", "it-ru", "tr-ru", "tr-en"] 
+    1.9.3p125 :033 > Yatran::LANGUAGES_TRANSLATIONS
+     => ["ru-en", "ru-pl", "ru-uk", "ru-de", "ru-fr", "ru-es", "ru-it", "ru-tr", "en-ru", "en-uk", "en-tr", "pl-ru", "uk-ru", "uk-en", "de-ru", "fr-ru", "es-ru", "it-ru", "tr-ru", "tr-en"] 
+        
 
 
 
