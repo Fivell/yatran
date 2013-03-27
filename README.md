@@ -1,6 +1,9 @@
 Ruby unofficial client for Yandex translation engine
 
 
+## Build status
+[![Build Status](https://travis-ci.org/Fivell/yatran.png)](https://travis-ci.org/Fivell/yatran)
+
 Examples
 
 
