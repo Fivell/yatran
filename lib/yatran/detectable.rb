@@ -20,13 +20,15 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #++
+
 module Yatran
 
   module Detectable
 
     def language
-       @yatran_lang ||=  API.request('detect', {:text=>self})['lang']
+      @yatran_lang ||= API.request('detect', {:text=>self})['lang']
     end
+
     alias_method 'lang', 'language'
   end
 end

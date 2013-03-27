@@ -24,13 +24,16 @@ require 'json'
 require 'net/http'
 require 'uri'
 
-require "yatran/version"
-require "yatran/error"
-require "yatran/url"
-require "yatran/api"
-require "yatran/languages"
-require "yatran/translatable"
-require "yatran/detectable"
+[ "version",
+  "error",
+  "url",
+  "api",
+  "languages",
+  "translatable",
+  "detectable"
+].each do |f|
+  require File.dirname(__FILE__) + '/yatran/' + f
+end
 
 
 String.class_eval do 

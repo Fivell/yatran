@@ -21,29 +21,26 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #++
 
-
-
-
 module Yatran
 
   class API
 
     def self.request(method, args = {})
-       url = URI.parse("#{YATRAN_URL}#{method}")
-       response = Net::HTTP.post_form(url, args).body
-       begin
-         response = JSON(response)
-       rescue
-         raise Error response
-       end
-       if response['code']
-          code = response['code'].to_i
-          if  ERROR_CODES.key?(code)
-             raise Error.new(ERROR_CODES[code])
-          end
+      url = URI.parse("#{YATRAN_URL}#{method}")
+      response = Net::HTTP.post_form(url, args).body
+      begin
+        response = JSON(response)
+      rescue
+        raise Error response
+      end
+      if response['code']
+        code = response['code'].to_i
+        if  ERROR_CODES.key?(code)
+          raise Error.new(ERROR_CODES[code])
+        end
 
-       end
-       response
+      end
+      response
     end
   end
 end

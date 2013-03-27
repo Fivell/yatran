@@ -26,19 +26,16 @@ module Yatran
   module Translatable
 
 
-     def self.included(base)
-
-       base.extend ClassMethods
-
-     end
+    def self.included(base)
+      base.extend ClassMethods
+    end
 
 
-     def translate(translation_direction)
-       response = API.request('translate', {:lang=> translation_direction, :text=>self})['text']
-       response =  response[0] unless self.kind_of? Array
-       response
-     end
-
+    def translate(translation_direction)
+      response = API.request('translate', {:lang=> translation_direction, :text=>self})['text']
+      response = response[0] unless self.kind_of? Array
+      response
+    end
 
 
     # Overrides @method_missing@ to define and call dynamic translation methods.
@@ -47,17 +44,16 @@ module Yatran
     #
     def method_missing(method, *args, &block)
 
-       translation = translation_direction(method.to_s)
+      translation = translation_direction(method.to_s)
 
-       if translation.nil?
-          super(method, *args, &block)
-       else
-         self.class.send(:define_method, method.to_s) { translate translation}
-         translate translation
-       end
+      if translation.nil?
+        super(method, *args, &block)
+      else
+        self.class.send(:define_method, method.to_s) { translate translation }
+        translate translation
+      end
 
     end
-
 
 
     # Overrides @respond_to?@ to use the dynamic translation methods.
@@ -65,38 +61,37 @@ module Yatran
     # @private
 
     def respond_to?(method, include_private = false)
-
       return true unless translation_direction(method.to_s).nil?
       super(method, include_private)
     end
 
 
-
     def translation_direction(method)
 
       method = case method
-        when /^to_(.*)_from_(.*)$/
-          then "#{$2}-#{$1}"
-        when /^from_(.*)_to_(.*)$/
-          then "#{$1}-#{$2}"
-        when /^(.*)_(.*)$/
-          then "#{$1}-#{$2}"
-      end
+                 when /^to_(.*)_from_(.*)$/
+                 then
+                   "#{$2}-#{$1}"
+                 when /^from_(.*)_to_(.*)$/
+                 then
+                   "#{$1}-#{$2}"
+                 when /^(.*)_(.*)$/
+                 then
+                   "#{$1}-#{$2}"
+               end
 
-      (LANGUAGES_TRANSLATIONS.include? method ) ? method : nil
-
+      (LANGUAGES_TRANSLATIONS.include? method) ? method : nil
 
     end
 
 
+    module ClassMethods
 
-     module ClassMethods
+      def translation_directions
+        LANGUAGES_TRANSLATIONS
+      end
 
-       def translation_directions
-           LANGUAGES_TRANSLATIONS
-       end
-
-     end
+    end
 
 
   end
