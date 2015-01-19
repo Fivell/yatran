@@ -31,7 +31,7 @@ module Yatran
       begin
         response = JSON(response)
       rescue
-        raise Error response
+        raise Error.new response
       end
       if response['code']
         code = response['code'].to_i

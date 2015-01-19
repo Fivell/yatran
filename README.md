@@ -4,6 +4,8 @@ Ruby unofficial client for Yandex translation engine
 ## Build status
 [![Build Status](https://travis-ci.org/Fivell/yatran.png)](https://travis-ci.org/Fivell/yatran)
 
+## Yandex translate API v1 is no longer available, so please don't use it
+
 Examples
 
 
@@ -113,7 +115,4 @@ Or install it yourself as:
 
 
 
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Fivell/yatran/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 

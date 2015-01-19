@@ -23,9 +23,6 @@
 
 module Yatran
 
-  class Error < StandardError
-  end
-
   class CLI
 
     def initialize()
